@@ -1,0 +1,1 @@
+A character mod for Slay the Spire containing The Shinobi, a master of offense and stealth.
