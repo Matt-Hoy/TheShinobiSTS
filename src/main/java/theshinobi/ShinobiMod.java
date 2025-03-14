@@ -21,7 +21,7 @@ import java.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
-import theshinobi.cards.BaseCard;
+import theshinobi.cards.ShinobiCard;
 import theshinobi.character.MyCharacter;
 import theshinobi.util.GeneralUtils;
 import theshinobi.util.KeywordInfo;
@@ -252,6 +252,6 @@ public class ShinobiMod
 
   @Override
   public void receiveEditCards() {
-    new AutoAdd(modID).packageFilter(BaseCard.class).setDefaultSeen(true).cards();
+    new AutoAdd(modID).packageFilter(ShinobiCard.class).setDefaultSeen(true).cards();
   }
 }
