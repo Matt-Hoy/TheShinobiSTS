@@ -12,5 +12,9 @@
   "${modID}:Borrow": {
     "NAME": "Borrow",
     "DESCRIPTION": "Deal !D! damage. Gain !M! gold."
+  },
+  "${modID}:Slink": {
+    "NAME": "Slink",
+    "DESCRIPTION": "Deal !D! damage. Gain !M!% Evasion chance this turn."
   }
 }
