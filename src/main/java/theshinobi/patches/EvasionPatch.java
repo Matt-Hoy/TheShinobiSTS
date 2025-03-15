@@ -1,6 +1,6 @@
 package theshinobi.patches;
 
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.vfx.combat.BlockedWordEffect;
 import theshinobi.powers.EvasionPower;
 
 // Edited to clone functionality in the saiyajin DodgeChancePatch which did it more cleanly.
-@SpirePatch2(clz = AbstractPlayer.class, method = "damage")
+@SpirePatch(clz = AbstractPlayer.class, method = "damage")
 public class EvasionPatch {
   public static SpireReturn<Void> Prefix(AbstractPlayer player, DamageInfo info) {
     if (AbstractDungeon.player.hasPower(EvasionPower.POWER_ID)) {

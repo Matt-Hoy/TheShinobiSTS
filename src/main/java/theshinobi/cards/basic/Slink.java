@@ -17,7 +17,7 @@ public class Slink extends ShinobiCard {
   public static final String ID = makeID("Slink");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, 1);
+          MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY, 1);
   private static final int DAMAGE = 6;
   private static final int UPG_DAMAGE = 3;
   private static final int MAGIC = 10;

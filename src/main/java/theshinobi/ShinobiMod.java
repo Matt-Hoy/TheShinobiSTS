@@ -16,6 +16,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import org.apache.logging.log4j.LogManager;
@@ -23,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 import theshinobi.cards.ShinobiCard;
 import theshinobi.character.MyCharacter;
+import theshinobi.relics.ShinobiRelic;
 import theshinobi.util.GeneralUtils;
 import theshinobi.util.KeywordInfo;
 import theshinobi.util.TextureLoader;
@@ -30,6 +32,7 @@ import theshinobi.util.TextureLoader;
 @SpireInitializer
 public class ShinobiMod
     implements EditCharactersSubscriber,
+        EditRelicsSubscriber,
         EditCardsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
@@ -253,5 +256,18 @@ public class ShinobiMod
   @Override
   public void receiveEditCards() {
     new AutoAdd(modID).packageFilter(ShinobiCard.class).setDefaultSeen(true).cards();
+  }
+
+  @Override
+  public void receiveEditRelics() {
+    new AutoAdd(modID)
+        .packageFilter(ShinobiRelic.class)
+        .any(
+            ShinobiRelic.class,
+            (info, relic) -> {
+              if (relic.pool != null) BaseMod.addRelicToCustomPool(relic, relic.pool);
+              else BaseMod.addRelic(relic, relic.relicType);
+              if (info.seen) UnlockTracker.markRelicAsSeen(relic.relicId);
+            });
   }
 }

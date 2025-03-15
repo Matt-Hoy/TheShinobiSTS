@@ -1,8 +1,16 @@
 {
-  "${modID}:PowerID": {
-    "NAME": "Ultimate Power",
+  "${modID}:Evasion": {
+    "NAME": "Evasion",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "You have a #b",
+      "% chance to receive no damage. Each time you successfully #yevade an attack, lower your #yEvasion by 10%."
+    ]
+  },
+  "${modID}:Loot": {
+    "NAME": "Loot",
+    "DESCRIPTIONS": [
+      "If this creature dies this turn, gain #b",
+      " gold."
     ]
   }
 }

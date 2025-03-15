@@ -12,6 +12,16 @@
     "DESCRIPTION": "This is displayed in the tooltip. Spaces should not be used be avoided in NAMES, with the exception of multi-word keywords (see next entry)."
   },
   {
+    "PROPER_NAME": "Evasion",
+    "NAMES": [
+      "Evasion",
+      "evasion",
+      "Evade",
+      "evade"
+    ],
+    "DESCRIPTION": "Give you a chance to receive no damage. Each time you successfully evade an attack, lower your Evasion by 10%."
+  },
+  {
     "PROPER_NAME": "Multiword Keyword",
     "NAMES": [
       "multiword keyword",

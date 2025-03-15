@@ -1,9 +1,9 @@
 {
-  "${modID}:RelicID": {
-    "NAME": "Good Relic",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
+  "${modID}:BloodyDagger": {
+    "NAME": "Bloody Dagger",
+    "FLAVOR": "Which came first, the blood or the dagger?.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
+      "Whenever you deal unblocked attack damage, heal for 50% of the damage."
     ]
   }
 }
